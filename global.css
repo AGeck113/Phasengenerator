@@ -1,0 +1,78 @@
+/* happy-monkey-regular - latin */
+@font-face {
+  font-family: "Happy Monkey";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""),
+    url("../assets/happy-monkey-v14-latin-regular.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../assets/happy-monkey-v14-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Happy Monkey", Arial, Helvetica, sans-serif;
+  background-color: lightblue;
+}
+:root {
+  --content-background: rgba(255, 255, 252, 0.666);
+  --tag-background: lightgray;
+}
+.title {
+  margin: auto;
+}
+.content {
+  display: grid;
+  padding: 1rem;
+}
+.page {
+  display: none;
+  width: 90%;
+  margin: auto;
+  background-color: rgb(85, 22, 22);
+  color: goldenrod;
+  padding: 2rem;
+  border-radius: 10%;
+  border: 5px solid black;
+}
+
+}
+.player {
+  background-color: rgb(85, 22, 22);
+  width: 30%;
+}
+.current {
+  display: grid;
+}
+.hidden {
+  display: none;
+}
+.input-players-name {
+  background-color: black;
+}
+.phaseContainer {
+  background-color: lightgray;
+}
+.startButton {
+  margin-top: 2rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: orange;
+  box-shadow: 5px 25px 30px;
+}
+.input-players-name {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  width: 90%;
+  margin: auto;
+  background-color: rgb(85, 22, 22);
+  color: goldenrod;
+  padding-top: 2rem;
+  border-radius: 10%;
+  border: 5px solid black;
+}
+#number-of-players {
+  width: 80%;
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./global.css" />
+    <script src="index.js" type="module" defer></script>
+    <title>Phase 10 Phasengenerator</title>
+  </head>
+  <body>
+    <section class="page current" data-js="homePage">
+      <form class="content" data-js="setup">
+        <fieldset>
+          <h1 class="title">Welcome to the Phase 10 phase-generator!</h1>
+          <p class="description">
+            Please have fun and select how you want to play the game!
+          </p>
+          <label for="NumberOfPlayers">How much players are playing?</label>
+          <input
+            name="NumberOfPlayers"
+            id="number-of-players"
+            type="number"
+            min="2"
+            max="4"
+            data-js="numberOfPlayers"
+          />
+          <label for="NumberOfPhases">How many phases do you want?</label>
+          <input
+            type="number"
+            id="number-of-phases"
+            name="numberOfPhases"
+            data-js="numberOfPhases"
+          />
+        </fieldset>
+        <fieldset>
+          <section class="Input-players-name" data-js="inputPlayersNames">
+            <label for="player1" class="hidden" data-js="labelInput1"
+              >Player 1:</label
+            >
+            <input
+              name="player1"
+              type="text"
+              id="player-one"
+              class="hidden"
+              data-js="inputPlayer1"
+            />
+            <label for="player2" class="hidden" data-js="labelInput2"
+              >Player 2:</label
+            >
+            <input
+              name="player2"
+              type="text"
+              id="player-two"
+              class="hidden"
+              data-js="inputPlayer2"
+            />
+            <label for="player3" class="hidden" data-js="labelInput3"
+              >Player 3:</label
+            >
+            <input
+              name="player3"
+              type="text"
+              id="player-three"
+              class="hidden"
+              data-js="inputPlayer3"
+            />
+            <label for="player4" class="hidden" data-js="labelInput4"
+              >Player 4</label
+            >
+            <input
+              name="player4"
+              type="text"
+              id="player-four"
+              class="hidden"
+              data-js="inputPlayer4"
+            />
+          </section>
+        </fieldset>
+        <button type="submit" class="startButton" data-js="startGameButton">
+          Start Game!
+        </button>
+      </form>
+      <div class="content" data-js="inputPlayerNames">
+        <label></label>
+      </div>
+    </section>
+    <section data-js="activeGame" class="page">
+      <div class="player" data-js="p1"><p data-js="phase1"></p></div>
+      <div class="player" data-js="p2"><p data-js="phase2"></p></div>
+      <div class="player" data-js="p3"><p data-js="phase3"></p></div>
+      <div class="player" data-js="p4"><p data-js="phase4"></p></div>
+    </section>
+    <section>
+      <ol data-js="phaseContainer" class="phaseContainer"></ol>
+      <form data-js="checkGame" class="hidden">
+        <p class="description">Who passed the phase?</p>
+        <fieldset>
+          <label for="checkGame1" class="description">Player one</label>
+          <input type="checkbox" name="checkGame1" data-js="player1" />
+          <label for="checkGame2" class="description">Player two</label>
+
+          <input type="checkbox" name="checkGame2" data-js="player2" />
+          <label for="checkGame3" class="description">Player three</label>
+
+          <input type="checkbox" name="checkGame3" data-js="player3" />
+          <label for="checkGame4" class="description">Player four</label>
+
+          <input type="checkbox" name="checkGame4" data-js="player4" />
+          <button type="submit" class="hidden" data-js="endRoundButton">
+            End Round!
+          </button>
+        </fieldset>
+      </form>
+    </section>
+  </body>
+</html>
