@@ -20,8 +20,8 @@ form.addEventListener("submit", (event) => {
   const formData = new FormData(event.target);
   const data = Object.fromEntries(formData);
   //   const inputsRequired = data.NumberOfPlayers;
-  homepage.classList.remove("current");
-  gamePage.classList.add("current");
+  homepage.classList.add("hidden");
+  gamePage.classList.remove("hidden");
   const times = data.numberOfPhases;
   const people = data.NumberOfPlayers;
   player1(data);
@@ -31,6 +31,7 @@ form.addEventListener("submit", (event) => {
   repeat(createPhase, times);
   endRound.classList.remove("hidden");
   checkForm.classList.remove("hidden");
+  gamePage.classList.remove("hidden");
 });
 
 function repeat(func, times) {

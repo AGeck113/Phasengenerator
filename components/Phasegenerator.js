@@ -9,6 +9,7 @@ export function createPhase(phases) {
     const newTask = phases[randomIndex];
     newPhase.text = `${newTask.text}, ${newPhase.text}`;
     const phase = document.createElement("li");
+    phase.classList.add("newPhase");
     phase.textContent = newPhase.text;
     newPhase.cardsNeeded = newPhase.cardsNeeded + newTask.cards;
     if (newPhase.cardsNeeded > 5) {

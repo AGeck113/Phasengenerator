@@ -9,7 +9,7 @@
     <title>Phase 10 Phasengenerator</title>
   </head>
   <body>
-    <section class="page current" data-js="homePage">
+    <section class="page" data-js="homePage">
       <form class="content" data-js="setup">
         <fieldset>
           <h1 class="title">Welcome to the Phase 10 phase-generator!</h1>
@@ -81,21 +81,19 @@
           Start Game!
         </button>
       </form>
-      <div class="content" data-js="inputPlayerNames">
-        <label></label>
-      </div>
+      <div class="content" data-js="inputPlayerNames"></div>
     </section>
-    <section data-js="activeGame" class="page">
+    <section data-js="activeGame" class="gamingPage hidden">
       <div class="player" data-js="p1"><p data-js="phase1"></p></div>
       <div class="player" data-js="p2"><p data-js="phase2"></p></div>
       <div class="player" data-js="p3"><p data-js="phase3"></p></div>
       <div class="player" data-js="p4"><p data-js="phase4"></p></div>
     </section>
     <section>
-      <ol data-js="phaseContainer" class="phaseContainer"></ol>
+      <ol data-js="phaseContainer" class="phaseContainer hidden"></ol>
       <form data-js="checkGame" class="hidden">
         <p class="description">Who passed the phase?</p>
-        <fieldset>
+        <fieldset class="checks">
           <label for="checkGame1" class="description">Player one</label>
           <input type="checkbox" name="checkGame1" data-js="player1" />
           <label for="checkGame2" class="description">Player two</label>
