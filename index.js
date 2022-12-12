@@ -15,6 +15,7 @@ const gamePage = document.querySelector('[data-js="activeGame"]');
 const endRound = document.querySelector('[data-js="endRoundButton"]');
 const checkForm = document.querySelector('[data-js="checkGame"]');
 const ol = document.querySelector('[data-js="phaseContainer"]');
+const endGame = document.querySelector('[data-js="endGame"]');
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -25,6 +26,7 @@ form.addEventListener("submit", (event) => {
   gamePage.classList.remove("hidden");
   const times = data.numberOfPhases;
   const people = data.NumberOfPlayers;
+  console.log(data);
   player1(data);
   player2(data);
   player3(data);
@@ -34,6 +36,7 @@ form.addEventListener("submit", (event) => {
   checkForm.classList.remove("hidden");
   gamePage.classList.remove("hidden");
   ol.classList.remove("hidden");
+  endGame.classList.remove("hidden");
 });
 
 function repeat(func, times) {
@@ -44,6 +47,10 @@ function repeat(func, times) {
 
 const inputPlayers = document.querySelector('[data-js="numberOfPlayers"]');
 inputPlayers.addEventListener("input", () => {
+  const inputFields = document.querySelector('[data-js="nameInput"]');
+  console.log(inputFields);
+
+  inputFields.classList.remove("hidden");
   const input1 = document.querySelector('[data-js="inputPlayer1"]');
   const input2 = document.querySelector('[data-js="inputPlayer2"]');
   const input3 = document.querySelector('[data-js="inputPlayer3"]');
@@ -126,20 +133,18 @@ checkForm.addEventListener("submit", (event) => {
   check2(data);
   check3(data);
   check4(data);
-  //   if (data.checkGame1 == "on") {
-  //     activePhasePlayer1++;
-  //     phase1.textContent = `You are in Phase ${activePhasePlayer1}`;
-  //   }
-  //   if (data.checkGame2 == "on") {
-  //     activePhasePlayer2++;
-  //     phase2.textContent = `You are in Phase ${activePhasePlayer2}`;
-  //   }
-  //   if (data.checkGame3 == "on") {
-  //     activePhasePlayer3++;
-  //     phase3.textContent = `You are in Phase ${activePhasePlayer3}`;
-  //   }
-  //   if (data.checkGame4 == "on") {
-  //     activePhasePlayer4++;
-  //     phase4.textContent = `You are in Phase ${activePhasePlayer4}`;
-  //   }
+  checkForm.reset();
+  window.scroll({
+    top: 1,
+    left: 1,
+    behavior: "smooth",
+  });
+});
+
+endGame.addEventListener("click", () => {
+  if (confirm("Are you sure?") == true) {
+    location.reload();
+  } else {
+    return;
+  }
 });

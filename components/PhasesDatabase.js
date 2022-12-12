@@ -1,5 +1,5 @@
 export const phases = [
-  { text: "1 Paar", cards: 2 },
+  { text: "Paar", cards: 2 },
   { text: "Drilling", cards: 3 },
   { text: "Vierling", cards: 4 },
   { text: "Fünfling", cards: 5 },
@@ -7,4 +7,12 @@ export const phases = [
   { text: "Viererfolge", cards: 4 },
   { text: "Fünferfolge", cards: 5 },
   { text: "4 Karten einer Farbe", cards: 4 },
+  { text: "5 Karten einer Farbe", cards: 5 },
+  { text: "2 Paar", cards: 4 },
+  { text: "3 gerade Zahlen", cards: 3 },
+  { text: "4 gerade Zahlen", cards: 4 },
+  { text: "5 gerade Zahlen", cards: 5 },
+  { text: "3 ungerade Zahlen", cards: 3 },
+  { text: "4 ungerade Zahlen", cards: 4 },
+  { text: "5 ungerade Zahlen", cards: 5 },
 ];

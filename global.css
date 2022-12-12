@@ -14,14 +14,23 @@
 }
 body {
   font-family: "Happy Monkey", Arial, Helvetica, sans-serif;
-  background-color: lightblue;
+  /* background-color: lightblue; */
+  background: linear-gradient(#f93a3a, #b3c73e);
 }
 :root {
   --content-background: rgba(255, 255, 252, 0.666);
   --tag-background: lightgray;
 }
 .title {
+  margin: 0.6rem;
+  padding: 0.6rem;
+  font-style: italic;
+}
+.descriptionTop {
+  width: 80%;
+  padding: 0.8rem 0.4rem;
   margin: auto;
+  font-size: 1.2rem;
 }
 .content {
   display: grid;
@@ -29,7 +38,7 @@ body {
 }
 .page {
   display: grid;
-  width: 90%;
+  width: 100%;
   margin: auto;
   background-color: rgb(85, 22, 22);
   color: goldenrod;
@@ -64,16 +73,48 @@ body {
 }
 .checks {
   display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: auto;
+  padding: 1rem 3rem;
+}
+.fieldsetChecks {
+  display: grid;
 }
 .description {
   width: 80%;
+  padding: 0.4rem;
+  margin: auto;
+  font-size: 1.2rem;
+}
+.playerNameCheck {
+  padding: 0.3rem;
+  margin: auto;
+}
+.endRoundButton {
+  margin: 1em auto;
+  font-size: 1.2rem;
+  background-color: green;
+  padding: 1.2em;
+  border-radius: 50%;
+  box-shadow: 5px 5px 30px red;
+  color: goldenrod;
+}
+
+.endGameButton {
+  margin: 1em auto;
+  background-color: red;
+  font-size: 1.2rem;
+  padding: 1.2em;
+  border-radius: 50%;
+  box-shadow: 5px 5px 30px green;
+  color: goldenrod;
 }
 .input-players-name {
   background-color: black;
 }
 .phaseContainer {
   border: 5px solid black;
-  border-radius: 20%;
+  border-radius: 2rem;
   padding: 2.5rem;
   background-color: rgb(85, 22, 22);
   color: goldenrod;
@@ -101,7 +142,11 @@ body {
 }
 #number-of-players {
   width: 100%;
+  margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
 }
 #number-of-phases {
   width: 100%;
+  margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
 }

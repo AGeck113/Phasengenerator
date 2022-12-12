@@ -11,9 +11,10 @@
   <body>
     <section class="page" data-js="homePage">
       <form class="content" data-js="setup">
+        <h1 class="title">Phase 10 phase-generator!</h1>
+
         <fieldset>
-          <h1 class="title">Welcome to the Phase 10 phase-generator!</h1>
-          <p class="description">
+          <p class="descriptionTop">
             Please have fun and select how you want to play the game!
           </p>
           <label for="NumberOfPlayers">How much players are playing?</label>
@@ -33,7 +34,7 @@
             data-js="numberOfPhases"
           />
         </fieldset>
-        <fieldset>
+        <fieldset class="hidden" data-js="nameInput">
           <section class="Input-players-name" data-js="inputPlayersNames">
             <label for="player1" class="hidden" data-js="labelInput1"
               >Player 1:</label
@@ -83,30 +84,88 @@
       </form>
       <div class="content" data-js="inputPlayerNames"></div>
     </section>
-    <section data-js="activeGame" class="gamingPage hidden">
-      <div class="player" data-js="p1"><p data-js="phase1"></p></div>
-      <div class="player" data-js="p2"><p data-js="phase2"></p></div>
-      <div class="player" data-js="p3"><p data-js="phase3"></p></div>
-      <div class="player" data-js="p4"><p data-js="phase4"></p></div>
+    <section data-js="activeGame" id="game" class="gamingPage hidden">
+      <div class="hidden" data-js="p1">
+        <p data-js="phase1"></p>
+      </div>
+      <div class="hidden" data-js="p2"><p data-js="phase2"></p></div>
+      <div class="hidden" data-js="p3"><p data-js="phase3"></p></div>
+      <div class="hidden" data-js="p4"><p data-js="phase4"></p></div>
     </section>
     <section>
       <ol data-js="phaseContainer" class="phaseContainer hidden"></ol>
       <form data-js="checkGame" class="hidden">
         <p class="description">Who passed the phase?</p>
-        <fieldset class="checks">
-          <label for="checkGame1" class="description">Player one</label>
-          <input type="checkbox" name="checkGame1" data-js="player1" />
-          <label for="checkGame2" class="description">Player two</label>
+        <fieldset class="fieldsetChecks">
+          <section class="checks">
+            <label
+              for="checkGame1"
+              class="playerNameCheck hidden"
+              data-js="player1label"
+              >Player one</label
+            >
+            <input
+              type="checkbox"
+              name="checkGame1"
+              class="hidden"
+              data-js="player1"
+            />
+            <label
+              for="checkGame2"
+              class="playerNameCheck hidden"
+              data-js="player2label"
+              >Player two</label
+            >
 
-          <input type="checkbox" name="checkGame2" data-js="player2" />
-          <label for="checkGame3" class="description">Player three</label>
+            <input
+              type="checkbox"
+              name="checkGame2"
+              class="hidden"
+              data-js="player2"
+            />
+            <label
+              for="checkGame3"
+              class="playerNameCheck hidden"
+              data-js="player3label"
+              >Player three</label
+            >
 
-          <input type="checkbox" name="checkGame3" data-js="player3" />
-          <label for="checkGame4" class="description">Player four</label>
+            <input
+              type="checkbox"
+              name="checkGame3"
+              class="hidden"
+              data-js="player3"
+            />
+            <label
+              for="checkGame4"
+              class="playerNameCheck hidden"
+              data-js="player4label"
+              >Player four</label
+            >
 
-          <input type="checkbox" name="checkGame4" data-js="player4" />
-          <button type="submit" class="hidden" data-js="endRoundButton">
+            <input
+              type="checkbox"
+              name="checkGame4"
+              class="hidden"
+              data-js="player4"
+            />
+          </section>
+          <p class="description">
+            Please select which player has beaten his phase after each round!
+          </p>
+
+          <button
+            type="submit"
+            class="endRoundButton hidden"
+            data-js="endRoundButton"
+          >
             End Round!
+          </button>
+          <p class="description">
+            Do you want to end the game and start a new one?
+          </p>
+          <button type="button" class="endGameButton hidden" data-js="endGame">
+            End Game!
           </button>
         </fieldset>
       </form>

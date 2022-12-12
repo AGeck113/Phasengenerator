@@ -7,7 +7,7 @@ export function createPhase(phases) {
   while (newPhase.cardsNeeded < 6) {
     const randomIndex = getRandomInt(phases.length);
     const newTask = phases[randomIndex];
-    newPhase.text = `${newTask.text}, ${newPhase.text}`;
+    newPhase.text = ` ${newTask.text} + ${newPhase.text}`;
     const phase = document.createElement("li");
     phase.classList.add("newPhase");
     phase.textContent = newPhase.text;
