@@ -15,4 +15,8 @@ export const phases = [
   { text: "3 ungerade Zahlen", cards: 3 },
   { text: "4 ungerade Zahlen", cards: 4 },
   { text: "5 ungerade Zahlen", cards: 5 },
+  { text: "4 Karten unter 8", cards: 4 },
+  { text: "5 Karten unter 8", cards: 5 },
+  { text: "4 Karten über 8", cards: 4 },
+  { text: "5 Karten über 8", cards: 5 },
 ];
