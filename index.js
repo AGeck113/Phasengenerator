@@ -14,6 +14,7 @@ const homepage = document.querySelector('[data-js="homePage"]');
 const gamePage = document.querySelector('[data-js="activeGame"]');
 const endRound = document.querySelector('[data-js="endRoundButton"]');
 const checkForm = document.querySelector('[data-js="checkGame"]');
+const ol = document.querySelector('[data-js="phaseContainer"]');
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -32,6 +33,7 @@ form.addEventListener("submit", (event) => {
   endRound.classList.remove("hidden");
   checkForm.classList.remove("hidden");
   gamePage.classList.remove("hidden");
+  ol.classList.remove("hidden");
 });
 
 function repeat(func, times) {

@@ -62,12 +62,12 @@ body {
 .hidden {
   display: none;
 }
-/* .checks {
+.checks {
   display: grid;
 }
 .description {
   width: 80%;
-} */
+}
 .input-players-name {
   background-color: black;
 }
