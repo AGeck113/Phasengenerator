@@ -132,7 +132,7 @@ body {
 .input-players-name {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  width: 90%;
+  width: 98%;
   margin: auto;
   background-color: rgb(85, 22, 22);
   color: goldenrod;
